@@ -20,7 +20,7 @@ var reply;
 var users;
 var messages = [];
 
-mongo.connect('mongodb://huuudaiuser:jb573698@ds145370.mlab.com:45370/huuudaidb', function(err, db) {
+mongo.connect('mongodb://muser:jb573698@ds157320.mlab.com:57320/maaarkerdb', function(err, db) {
 	db.createCollection('allcomments');
 	comments = db.collection('allcomments');
 	projects = db.collection('projects');
