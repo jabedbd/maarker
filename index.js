@@ -13,7 +13,7 @@ var bcrypt = require('bcrypt-nodejs');
 var moment = require('moment');
 moment().format();
 var app = express();
-var port = 3700;
+var port = 8080;
 var comments;
 var projects;
 var reply;
