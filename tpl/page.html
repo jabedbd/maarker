@@ -1,0 +1,106 @@
+<html>
+	<head>
+        <title><%= pdata[0].pname %></title>
+		<link rel='stylesheet' href='/css/bootstrap.min.css'>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Poppins:300,400,500,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="/css/iconmind-line.min.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+		<link rel='stylesheet' href='/css/bootstrap-theme.min.css'>
+		<link rel='stylesheet' href='/style.css'>                                       
+		<link rel='stylesheet' href='/ant/css/annotation.css'>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/homepage.css">
+	    <link rel="stylesheet" href="/css/utility.css">
+        <link rel="stylesheet" href="/css/responsive.css"> 
+        <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+		<script src='/js/bootstrap.min.js'></script>
+        <script type="text/javascript" src='/ant/jquery-ui.js'></script>
+         <script>jQuery.noConflict();</script>
+        <script type="text/javascript" src='/ant/prototype.js'></script>
+		<script type="text/javascript" src='/ant/jquery.annotate.js'></script>
+		
+		<script src='/peoples.js'></script>
+		<script src='/socket.io/socket.io.js'></script>
+        </head>
+        
+	<body class="bgproject">
+         <!-- =========== Header Area Start ============ -->
+    <header class="pbt-30">
+        <div class="container">
+            <div class="row">
+                <div class="cold-md-12">
+                   <div class="header text-center-xxs">
+                    <div class="brand float-left pb-xxs-20">
+                        <img class="brand__logo mr-10" src="/images/logo.png" alt="logo_img">
+                        <span class="brand__feature">It’s totally free for you!</span>
+                    </div>
+                        <div class="h_l_content type__uppercase float-right">
+                    <% if (session.passport.user != null) { %>
+                        <a href="/dashboard"><span><%= session.passport.user.local.name %></span></a> /
+                        <a href="/logout"><span>Log Out</span></a>
+                        
+                    <% } else  { %>
+                   
+                        <a href="/login"><span>Sign In</span></a>
+                        /
+                        <a href="/signup"><span class="cl__primary">start getting feedback</span></a>
+                        <% } %>
+                    </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- =========== Header Area End ============ -->  
+    <div class="container">
+    <div class="title-bar">
+    <div class="ttarea">
+    <div class="static-tt">Project Name:</div>
+      <% if (session.passport.user != null) { %>
+     <% if(pdata[0].userid == session.passport.user.local.uuid ) { %>
+    <div id="this_edit" class="this_edit">
+    <button class="edit_btn" id="edit_btn"> <i class="fa fa-pencil" aria-hidden="true"></i>
+</button>
+        </div>
+<div class="this_edit">
+<button style="display:none" class="edit_btn" id="save_this"><i class="fa fa-check" aria-hidden="true"></i></button>
+         </div>
+    <% } %> 
+     <% } %>
+    <div id="ptitle" class="project-title"><%= pdata[0].pname %></div>  
+   </div>
+    </div>    
+    </div>
+<% if(session.passport.user != null) { %>
+  <input type="hidden" id="uid" value="<%= session.passport.user.local.uuid %>">
+  <input type="hidden" id="name" value="<%= session.passport.user.local.name %>">
+<% } else { %> 
+<input type="hidden" id="uid" value="">
+<input type="hidden" id="name" value="">
+    
+<% } %>
+                    
+<div id="fluid" class="container-fluid ssoul">
+        <div class="frame">
+<img id="projimg" src="/files/<%= pdata[0].pimg %>" class="annotatable">
+  <div id="mycanvas"></div>
+
+            
+        </div>
+
+		<p>People:</p> <div id="people"></div>
+       <div id="data" style="display:none">
+       
+           
+       </div>
+        
+
+						
+        </div>
+
+						
+      </body>
+
+
+</html>

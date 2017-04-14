@@ -1,0 +1,285 @@
+.image-annotate-add {
+    background: #fff url(../images/asterisk_yellow.png) no-repeat 3px 3px;
+    border: solid 1px #ccc !important;
+    color: #000 !important;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: Verdana, Sans-Serif;
+    font-size: 12px;    
+    height: 18px;
+    line-height: 18px;    
+    padding: 2px 0 2px 24px;
+    margin: 5px 0;
+    width: 64px;
+    text-decoration: none;
+}
+.image-annotate-add:hover {
+    background-color: #eee;
+}
+.image-annotate-canvas {
+    border: solid 1px #ccc;
+    background-position: left top;
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0;
+    position: relative;
+}
+.image-annotate-view {
+    display: none;
+    position: relative;
+}
+.image-annotate-area {
+    border: 1px solid #000000;
+    position: absolute;
+}
+.image-annotate-area div {
+    border: 1px solid #FFFFFF;
+    display: block;
+}
+.image-annotate-area-hover div {
+    border-color: yellow !important;
+}
+.image-annotate-area-editable {
+    cursor: pointer;
+}
+.image-annotate-area-editable-hover div {
+    border-color: #00AD00 !important;
+}
+.image-annotate-note {
+    height: 90px;
+    border: 1px solid #e2e2e2;
+    font-size: 13px;    
+    width: 100%;
+    max-width: 250px;
+    position: absolute;
+    background: #fff;
+    color: #555555;
+    
+}
+.image-annotate-note .actions {
+    display: block;
+    font-size: 80%;
+}
+.image-annotate-edit {
+    display: none;
+}
+#image-annotate-edit-form {
+    background: #fff;
+    height: 78px;
+    position: absolute;
+    width: 250px;
+}
+#image-annotate-edit-form form {
+    clear: right;
+    margin: 0 !important;
+    padding: 0;
+    z-index: 999;
+}
+#image-annotate-edit-form .box {
+    margin: 0;
+}
+#image-annotate-edit-form input.form-text, #image-annotate-edit-form #edit-comment-wrapper textarea {
+    width: 90%;
+}
+#image-annotate-edit-form textarea {
+    height: 90px;
+    border: 1px solid #e2e2e2;
+    font-size: 12px;    
+    width: 100%;
+    padding: 10px 15px;
+    max-width: 250px;
+    
+}
+#image-annotate-edit-form fieldset {
+    background: transparent none repeat scroll 0 0;
+}
+#image-annotate-edit-form .form-item {
+    margin: 0 0 5px;
+}
+#image-annotate-edit-form .form-button, #image-annotate-edit-form .form-submit {
+    margin: 0;
+}
+.image-annotate-edit-ok {
+    background: #f14f16;
+    padding: 15px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    display: block;
+    color: #fff;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+}
+.image-annotate-edit-ok:hover {
+    opacity: 0.9;
+    color: #fff;
+}
+.image-annotate-edit-area {
+    border: 1px solid black;
+    cursor: move;
+    display: block;
+    height: 60px;
+    left: 10px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    width: 60px;
+}
+.image-annotate-edit-area .ui-resizable-handle {
+    opacity: 0.8;
+}
+
+.ui-resizable {
+    position: absolute;
+}
+.ui-resizable-handle {
+    position: absolute;
+    font-size: 0.1px;
+    z-index: 99999;
+    display: block;
+}
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable- autohide .ui-resizable-handle {
+    display: block;
+}
+.ui-resizable-n {
+    cursor: n-resize;
+    height: 7px;
+    width: 100%;
+    top: -5px;
+    left: 0px;
+}
+.ui-resizable-s {
+    cursor: s-resize;
+    height: 7px;
+    width: 100%;
+    bottom: -5px;
+    left: 0px;
+}
+.ui-resizable-e {
+    cursor: e-resize;
+    width: 7px;
+    right: -5px;
+    top: 0px;
+    height: 100%;
+}
+.ui-resizable-w {
+    cursor: w-resize;
+    width: 7px;
+    left: -5px;
+    top: 0px;
+    height: 100%;
+}
+.ui-resizable-se {
+    cursor: se-resize;
+    width: 12px;
+    height: 12px;
+    right: 1px;
+    bottom: 1px;
+}
+.ui-resizable-sw {
+    cursor: sw-resize;
+    width: 9px;
+    height: 9px;
+    left: -5px;
+    bottom: -5px;
+}
+.ui-resizable-nw {
+    cursor: nw-resize;
+    width: 9px;
+    height: 9px;
+    left: -5px;
+    top: -5px;
+}
+.ui-resizable-ne {
+    cursor: ne-resize;
+    width: 9px;
+    height: 9px;
+    right: -5px;
+    top: -5px;
+}
+
+
+.antbtn {
+	display: block;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	border: 1px solid white;
+	position: absolute;
+	background-color: #076de0;
+}
+
+.cancel-this-comment {
+    position: absolute;
+    top: -11px;
+    left: 236px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 11px;
+    cursor: pointer;
+    background: #222;
+    width: 26px;
+    height: 26px;
+    border-radius: 50px;
+    text-align: center;
+    padding: 0px 0px;
+}
+
+.cancel-this-comment:hover {
+    color: #fff;
+    background: #191919;
+}
+.author {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-size: 13px; 
+    padding: 0 15px 10px;
+}
+
+.image-annotate-note p{
+    padding: 10px 15px 5px;
+}
+.comment {
+    width: 100%;
+    border: 1px solid #e2e2e2;
+    padding: 10px 15px;
+    height: 70px;
+    margin-top: -1px;
+}
+.new-reply {
+    background: #fff;
+    padding: 10px 15px;
+    border: 1px solid #e2e2e2;
+    margin-top: -1px;
+}
+.repby-author {
+    font-family: 'Merriweather', serif;
+    font-size: 13px;
+}
+.replies p {
+    padding: 0px 0 5px
+}
+
+.hide_comment {
+    display: none !important;
+}
+
+.show_comment {
+    display: block !important;
+}
+.my_faltu_btn {
+    display: block;
+}
+
+.showmark {
+	cursor: pointer;
+position: absolute;
+top: 0;
+right: 5px;
+font-size: 10px;
+text-transform: uppercase;
+z-index: 999;
+}

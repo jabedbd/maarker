@@ -1,0 +1,91 @@
+<html>
+	<head>
+         <title>Marker</title>
+		<link rel='stylesheet' href='/css/bootstrap.min.css'>
+        <!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Poppins:300,400,500,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/iconmind-line.min.css">
+		<link rel='stylesheet' href='/css/bootstrap-theme.min.css'>
+		<link rel='stylesheet' href='/css/homePAGE.css'>                                       
+		<link rel='stylesheet' href='/ant/css/annotorious.css'>
+        <link rel="stylesheet" href="/css/style.css">
+	    <link rel="stylesheet" href="/css/utility.css">
+	    <!-- Responsive css -->
+	    <link rel="stylesheet" href="/css/responsive.css"> 
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+		<script src='/js/bootstrap.min.js'></script>
+		<script src='/js/home.js'></script>
+		
+		
+		<script src='ant/annotorious.min.js'></script>
+</head>
+<body>
+     <!-- =========== Header Area Start ============ -->
+    <header class="pbt-30">
+        <div class="container">
+            <div class="row">
+                <div class="cold-md-12">
+                   <div class="header text-center-xxs">
+                    <div class="brand float-left pb-xxs-20">
+                        <img class="brand__logo mr-10" src="/images/logo.png" alt="logo_img">
+                        <span class="brand__feature">It’s totally free for you!</span>
+                    </div>
+                        <div class="h_l_content type__uppercase float-right">
+                    <% if (session.passport != null) { %>
+                        <a href="/dashboard"><span><%= session.passport.user.local.name %></span></a> /
+                        <a href="/logout"><span>Log Out</span></a>
+                        
+                    <% } else  { %>
+                   
+                        <a href="/login"><span>Sign In</span></a>
+                        /
+                        <a href="/signup"><span class="cl__primary">start getting feedback</span></a>
+                        <% } %>
+                    </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- =========== Header Area End ============ -->   
+  <div class="container pt-100">
+  <div class="col-md-3">
+   <div class="uploadWrapper">
+  <form id="imageUploadForm" class="imageUploadForm">
+  <input type='file' id="file" class="uploadButton" accept="image/*" />
+    <div id="uploadedImg" class="uploadedImg">
+      <i class="icon-data-upload"></i>
+    </div>
+ <span class="helpText" id="helpText">Drop an image here
+or click to select a file.</span>
+  </form>
+</div>	   
+ </div> 
+<%  projects.forEach(function(project) { %>
+ <a href="project/<%= project.pid %>">
+  <div class="col-md-3 pb-30">
+  <div class="theproject">  
+   <div class="single"> 
+<img class="my_projects" src="/files/<%= project.pimg %>" >
+      </div>
+<div class="project-footer">
+<h3><%= project.pname %></h3>
+  <div class="project-date">
+
+    <%=  moment(project.cdate).format( 'DD-MMMM-YYYY')
+   %>
+
+  </div>
+ </div>
+    </div>
+      </div>
+      </a>
+
+<% }) %>
+    
+  </div>  
+	
+      </body>
+
+</html>

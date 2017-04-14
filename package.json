@@ -1,0 +1,11 @@
+{
+	"name": "Marker",
+	"version": "0.0.1",
+	"description": "Its a huuudai project lol:P",
+	"dependencies": {
+		"socket.io": "*",
+		"express": "*",
+		"jade": "*"
+	},
+	"author": "Huuudai :D"
+}

@@ -1,0 +1,468 @@
+/*---------------------------------------------
+                ==Base CSS==
+---------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700');
+
+
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+}
+
+@media all and (max-width: 768px) {
+    html {
+        font-size: 81.25%;
+    }
+}
+
+
+body {
+    font-size: 15px;
+    line-height: 26px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Poppins', sans-serif;
+    color: #222222;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    -webkit-font-variant-ligatures: common-ligatures;
+    font-variant-ligatures: common-ligatures;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1,
+.h1 {
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 700;
+}
+
+h2,
+.h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 34px;
+    line-height: 48px;
+    font-weight: 400;
+}
+
+h3,
+.h3 {
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 500;
+}
+
+h4,
+.h4 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+h5,
+.h5 {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 300;
+    opacity: .8;
+}
+
+h6,
+.h6 {
+}
+
+p,
+.p {
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 300;
+    opacity: .8;
+}
+.typo-md{
+    font-size: 46px;
+}
+a{
+    font-size: 14px;
+    color: #222;
+    font-weight: 500;
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    outline: none;
+    color: #f14f16;
+}
+.lead {
+    font-size: 1.35714286em;
+    line-height: 1.68421053em;
+}
+
+@media all and (max-width: 767px) {
+    h1,
+    .h1 {
+        font-size: 2.35714286em;
+        line-height: 1.36363636em;
+    }
+    h2,
+    .h2 {
+        font-size: 1.78571429em;
+        line-height: 1.5em;
+    }
+    h3,
+    .h3 {
+        font-size: 1.35714286em;
+        line-height: 1.85714286em;
+    }
+    .lead {
+        font-size: 1.35714286em;
+        line-height: 1.68421053em;
+    }
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    line-height: 1.85714286em;
+}
+
+ul.bullets {
+    list-style: inside;
+}
+
+ol {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+}
+
+blockquote {
+    font-size: 1.78571429em;
+    line-height: 1.5em;
+    padding: 0;
+    margin: 0;
+    border-left: 0;
+}
+
+strong {
+    font-weight: 600;
+}
+
+hr {
+    margin: 40px 0 30px;;
+    border-color: #fafafa;
+}
+.center{
+    text-align: center;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+*::after, *::before {
+  content: '';
+}
+.transition,
+.faq-section i,
+.video__content hr,
+.footer_bottom li{
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+}
+img{
+    max-width: 100%;
+}
+.boxed{
+    padding: 25px
+}
+
+
+/*------ Container Mid -------*/
+
+.container__mid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/*------ Image overlay -------*/
+.overlay {
+    position: relative;
+    z-index: 1;
+}
+
+.overlay:before {
+    content: "";
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff); 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+/*
+************************************************
+               ==Header css==
+************************************************ 
+*/
+header {
+    border-bottom: 1px solid #ededed;
+}
+.brand__feature{
+    color: #444444;
+    font-size: 14px;
+}
+.h_l_content{
+    color: #b2b2b2;
+}
+
+.h_l_content a{
+    font-weight: 600;
+}
+
+/*
+************************************************
+               ==Hero css==
+************************************************ 
+*/
+.hero__section {
+    background: url(assets/images/pattern.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.hero__section h2 {
+    max-width: 570px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.hero__section .hero__content{
+    -ms-flex-flow: column;
+    flex-flow: column;
+}
+.hero__content a{
+    padding: 20px 40px
+}
+.hero__content a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 20px 40px;
+    border-radius: 3px;
+}
+
+/*
+************************************************
+               ==Video css==
+************************************************ 
+*/
+.product__video video {
+    width: 100%;
+}
+/*
+************************************************
+               ==Reason css==
+************************************************ 
+*/
+.reason h2{
+    padding-bottom: 40px;
+}
+.comparison h5{
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-weight: 600;
+    padding-bottom: 30px;
+    opacity: 1;
+}
+span.capacity {
+    font-size: 17px;
+    font-weight: 700;
+    display: block;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+span.duration {
+    font-size: 13px;
+    font-weight: 500;
+    opacity: .8;
+}
+.comparison {
+    border-style: solid;
+    border-color: #e6e6e6;
+    border-width: 1px 0px 1px 1px;
+    padding: 20px 120px 20px 30px;
+    border-radius: 3px;
+}
+
+.comparison.our-plan{
+    color: #fff;
+    transform: scale(1.2);
+    overflow: hidden;
+}
+.comparison__wrapper {
+    transition: 0.4s ease;
+}
+.comparison__cta.our-plan {
+    transform: scale(1.2);
+    margin: 0 34px 0px 0px;
+    padding: 20px 100px 30px 30px;
+    bottom: -170px;
+    transition: 0.4s ease;
+}
+.comparison__cta h5{
+    display: none;
+}
+.comparison__cta span.capacity {
+    font-size: 14px;
+}
+.comparison__cta.our-plan span.duration {
+    font-size: 12px;
+}
+.comparison.our-plan:hover .comparison__cta.our-plan{
+    bottom: 0;
+}
+
+.comparison__cta.our-plan span.capacity {
+    padding: 0;
+}
+a.comparison__cta__btn {
+    color: #fff;
+    padding-top: 20px;
+    font-size: 14px;
+}
+.comparison__cta__btn i{
+    transition: 0.4s ease;
+}
+.comparison__cta__btn:hover i{
+    margin-left: 10px;  
+}
+
+/*
+************************************************
+               ==Why Should CSS==
+************************************************ 
+*/
+
+.choosing__reason h2{
+    color:#fff;
+    padding-bottom: 60px;
+}
+.choosing__reason__single img{
+    float: left;
+}
+.choosing__reason__single h4{
+    color:#fff;
+    padding-bottom: 20px;
+    padding-left: 80px;
+}
+
+.choosing__reason__single p{
+    color:#fff;
+    padding-left: 80px;
+
+}
+
+
+.ttarea {
+	display: inline-block;
+	font-size: 18px;
+}
+
+.static-tt {
+	float: left;
+	padding-right: 18px;
+    color: #b3b3b3;
+    
+}
+
+
+.project-title {
+	float: right;
+}
+
+
+
+
+.edit_btn {
+	background: transparent;
+	border: none;
+}
+
+#new_title {
+	color: #222222;
+}
+
+
+.this_edit {
+	float: right;
+	position: relative;
+	padding-left: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

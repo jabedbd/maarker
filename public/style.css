@@ -1,0 +1,31 @@
+#content {
+	width: 100%;
+	height: 300px;
+	margin: 0 0 20px 0;
+	border: solid 1px #999;
+	overflow-y: scroll;
+	font-size: 18px;
+	line-height: 3;
+}
+
+.forms {
+	width: 500px;
+}
+
+body {
+	font-size: 18px;
+}
+
+.chatmsg {
+	background: #91C8FF;
+	padding: 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+
+img {
+    
+    max-width: 100%;
+}

@@ -1,0 +1,171 @@
+/* ==============================================
+==================Large Display==============*/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.container{
+		width: 910px;
+	}
+    .comparison{
+        padding: 20px 50px 20px 20px;
+    }
+    .comparison__cta.our-plan {
+        bottom: -205px;
+    }
+    .comparison__cta.our-plan {
+        margin: 0 28px 0px 0px;
+        padding: 17px 40px 30px 20px;
+    }
+
+}
+
+/* ==============================================
+==================Medium Display==============*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.container {
+        width: 728px;
+    }
+    .comparison {
+        padding: 20px 40px 20px 20px;
+    }
+    .comparison__cta.our-plan {
+    bottom: -250px;
+    }
+    .comparison__cta.our-plan {
+        padding: 20px 30px 30px 30px;
+    }
+    .choosing__reason__single p {
+        max-width: 550px;
+    }
+}
+@media (min-width: 768px){
+    .reason__section .container__mid{
+        margin-left: -35px;
+        
+    }
+}
+
+/* ==============================================
+==================Tab Screen==============*/
+@media only screen and (max-width: 767px) {
+	.container {
+        width: 450px;
+    }
+    .hero__content a {
+        font-size: 14px;
+        padding: 15px 40px;
+    }
+    header .container {
+        width: 90%;
+    }
+    .plyr__play-large {
+        padding: 15px;
+    }
+    .comparison {
+        border-width: 1px 1px 1px 1px;
+        width: 400px;
+    }
+    .comparison.our-plan{
+        border-width: 1px 0px 1px 1px;
+        transform: scale(1);
+    }
+    .comparison__cta.our-plan {
+        padding: 5px 140px 22px 28px;
+        margin: 0; 
+    }
+    .comparison__cta h5{
+        display: initial;
+        font-size: 13px;
+        padding-bottom: 5px;
+    }
+    a.comparison__cta__btn {
+        padding-top: 15px;
+    }
+    .comparison__cta.our-plan span.capacity{
+        line-height: 0px;
+        padding: 8px 0 10px 0;
+    }
+}
+
+/* ==============================================
+=============Medium Mobile Screen==============*/
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+	.container {
+        width: 450px;
+    }
+}
+/* ==============================================
+============Small Mobile Display==============*/
+@media only screen and (min-width: 300px) and (max-width: 479px) {
+	.container {
+        width: 300px;
+    }
+    .comparison {
+        padding: 20px 80px 20px 30px;
+        width: 300px;
+    }
+        .comparison h5 {
+        padding-bottom: 15px;
+    }
+    .comparison.our-plan {
+        padding: 20px 30px 20px 20px;
+    }
+    .comparison__cta.our-plan {
+        bottom: -250px;
+    }
+    .comparison__cta.our-plan {
+        padding: 14px 60px 20px 16px;
+    }
+    a.comparison__cta__btn {
+        padding-top: 5px;
+    }
+    .choosing__reason h2 {
+        font-size: 22px;
+    }
+    .choosing__reason__single img {
+        float: none;
+        padding-bottom: 25px;
+    }
+    .choosing__reason__single h4 {
+        padding-left: 0;
+        padding-bottom: 15px;
+    }
+    .choosing__reason__single p {
+        padding-left: 0;
+    }
+    .plyr--video .plyr__controls {
+        padding: 0px 10px 10px;
+    }
+}
+@media only screen and (max-width: 320px) {
+
+    .brand__feature {
+        display: block;
+        padding-top: 10px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
